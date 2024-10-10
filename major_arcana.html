@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Arcana</title>
+    <style>
+        /* Main styles for the profile page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
+
+        .container {
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+            margin-top: 20px;
+            position: relative;
+            padding: 20px;
+            border: 2px solid white;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px 8px 0 0;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .dev-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .back-button {
+            background-color: white; /* White background */
+            color: black; /* Black text */
+            border: 2px solid transparent; /* No border by default */
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: border 0.3s, color 0.3s, background 0.3s; /* Transition for border, color, and background */
+            margin-top: 10px; /* Space above the button */
+            width: 100%; /* Make the button full width */
+        }
+
+        .back-button:hover {
+            border: 2px solid white; /* White border on hover */
+            color: transparent; /* Make the text transparent */
+            background: linear-gradient(90deg, blue, orange); /* Gradient background */
+            background-clip: text; /* Clip the background to text */
+            -webkit-background-clip: text; /* For Safari */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+        }
+
+        .profile-header {
+            position: relative;
+            top: -50px;
+            margin-bottom: -40px;
+            text-align: center; /* Center the header */
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            background-color: white;
+            display: block; /* Makes the image a block element */
+            margin: 0 auto; /* Centers the image horizontally */
+        }
+
+        .arcana-title {
+            margin: 10px 0;
+            font-size: 16px; /* Smaller font size */
+            color: white;
+            text-align: right; /* Align title to the right */
+        }
+
+        .arcana-subtitle {
+            margin: 5px 0;
+            font-size: 14px; /* Smaller font size */
+            color: white;
+            text-align: left; /* Align subtitle to the left */
+        }
+
+        .arcana-list {
+            color: white;
+            margin-top: 20px;
+            text-align: right; /* Align list items to the right */
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+        }
+
+        .arcana-item {
+            padding: 5px;
+            border-bottom: 1px solid #444;
+            font-size: 12px; /* Smaller font size for the list items */
+            text-align: right; /* Align individual items to the right */
+        }
+
+        .arcana-item:last-child {
+            border-bottom: none;
+        }
+
+        .arcana-highlight {
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .arcana-highlight:hover {
+            background: linear-gradient(90deg, orange, purple, blue); /* Gradient effect */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+            text-shadow: 0 0 5px purple, 0 0 10px blue; /* Add a glowing effect */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        /* New class for the Golden Excuse link */
+        .golden-excuse {
+            background: linear-gradient(90deg, orange, yellow); /* Gradient from orange to yellow */
+            -webkit-background-clip: text; /* Clip the background to text */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .golden-excuse:hover {
+            text-shadow: 0 0 5px orange, 0 0 10px yellow; /* Add a glowing effect on hover */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        .left-align {
+            text-align: left; /* Align these items to the left */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-image" id="headerImage" style="background-image: url('C:\\Users\\Amaya\\Downloads\\moi\\uwc1.jpg');">
+            <!-- Smiley face button removed -->
+        </div>
+        <div class="profile-header">
+            <img id="profileImage" src="C:\\Users\\Amaya\\Downloads\\moi\\uwcpfp.jpg" alt="Profile Picture">
+        </div>
+
+        <div class="arcana-title">Major Arcana</div> <!-- Title Added Here -->
+        <div class="arcana-subtitle">(formerly Diary of the Deceased)</div> <!-- Mini Heading Added Here -->
+
+        <div class="arcana-list">
+            <div class="arcana-item left-align">0 - <a href="j_rtpf_entries.html" class="arcana-highlight">Journie: Retrieve the purple flower.</a></div> <!-- Updated Item with Link -->
+            <div class="arcana-item left-align">I - <a href="your_link_here.html" class="golden-excuse">The Golden Excuse</a></div> <!-- Updated with Gradient and Link -->
+            <div class="arcana-item">II - [locked]</div>
+            <div class="arcana-item">III - [locked]</div>
+            <div class="arcana-item">IV - [locked]</div>
+            <div class="arcana-item">V - [locked]</div>
+            <div class="arcana-item">VI - [locked]</div>
+            <div class="arcana-item">VII - [locked]</div>
+            <div class="arcana-item">VIII - [locked]</div>
+            <div class="arcana-item">IX - [locked]</div>
+            <div class="arcana-item">X - [locked]</div>
+            <div class="arcana-item">XI - [locked]</div>
+            <div class="arcana-item">XII - [locked]</div>
+            <div class="arcana-item">XIII - [locked]</div>
+            <div class="arcana-item">XIV - [locked]</div>
+            <div class="arcana-item">XV - [locked]</div>
+            <div class="arcana-item">XVI - [locked]</div>
+            <div class="arcana-item">XVII - [locked]</div>
+            <div class="arcana-item">XVIII - [locked]</div>
+            <div class="arcana-item">XIX - [locked]</div>
+            <div class="arcana-item">XX - [locked]</div>
+            <div class="arcana-item">XXI - [locked]</div>
+        </div>
+
+        <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
+    </div>
+
+    <script>
+        function requestAccess() {
+            let code = prompt("Enter access code:");
+            if (code === "yourCode") {
+                // Popup functionality removed
+            } else {
+                alert("Incorrect code.");
+            }
+        }
+
+        function goBack() {
+            // Logic to go back to the previous page
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
