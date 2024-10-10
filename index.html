@@ -21,13 +21,13 @@
             background-color: #000;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 400px; /* Adjusted for vertical rectangle */
+            max-width: 375px; /* Width adjusted to match Instagram */
             width: 100%;
             margin-top: 20px;
             text-align: center;
             position: relative;
             padding: 20px;
-            border: 4px solid white; /* Wider border */
+            border: 2px solid white;
         }
 
         .header-image {
@@ -122,22 +122,21 @@
         }
 
         .menu-bar {
-            margin-top: 15px; /* Adjusted for spacing */
-            font-size: 12px; /* Increased font size for the mini menu */
+            margin-top: 25px; /* Adjusted for spacing */
+            font-size: 16px; /* Slightly increased for better visibility */
             font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px; /* Increased gap between menu items */
+            gap: 15px; /* Increased gap for better spacing */
         }
 
         .menu-bar span {
             color: white;
             cursor: pointer;
             position: relative;
-            padding: 10px; /* Increased padding for menu items */
+            padding: 5px 10px; /* Increased padding for better button size */
             transition: color 0.3s;
-            font-size: 14px; /* Increased font size for better visibility */
         }
 
         .menu-bar span:hover {
@@ -147,8 +146,8 @@
         }
 
         .menu-bar .divider {
-            height: 20px; /* Increased height for the divider */
-            width: 2px; /* Increased width for better visibility */
+            height: 15px;
+            width: 2px; /* Increased width of divider */
             background-color: white;
         }
 
@@ -178,7 +177,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 10px; /* Smaller font size for small buttons */
+            font-size: 12px; /* Smaller font size for small buttons */
             margin: 10px 5px 0;
             transition: background-color 0.3s, color 0.3s, border 0.3s;
         }
@@ -233,27 +232,6 @@
         /* New rule to make Minor Arcana button bold */
         .arcana-button.minor {
             font-weight: bold; /* Make the button bold */
-        }
-
-        /* Responsive styles */
-        @media (max-width: 600px) {
-            .menu-bar {
-                font-size: 14px; /* Increase font size for mobile */
-            }
-
-            .menu-bar span {
-                padding: 10px 15px; /* Increase padding for menu items */
-                font-size: 16px; /* Increase font size for better visibility */
-            }
-
-            .menu-bar .divider {
-                height: 25px; /* Increase divider height for mobile */
-                width: 2px; /* Increase divider width for mobile */
-            }
-
-            .arcana-button {
-                font-size: 12px; /* Increase font size for buttons */
-            }
         }
 
     </style>
@@ -317,8 +295,8 @@
 
         function showMinorArcana() {
             document.getElementById("minorArcana").classList.add("active");
-            document.getElementById("majorArcana").classList.remove("active");
-            document.getElementById("other").classList.remove("active");
+            document.getElementById("majorArcana").classList.remove("active"); 
+            document.getElementById("other").classList.remove("active"); 
         }
 
         function showOther() {
