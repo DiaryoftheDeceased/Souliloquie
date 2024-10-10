@@ -21,8 +21,8 @@
             background-color: #000;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 400px;
-            width: 90%; /* Adjusted to fit smaller screens */
+            max-width: 300px; /* Adjusted for vertical rectangle */
+            width: 100%;
             margin-top: 20px;
             text-align: center;
             position: relative;
@@ -122,21 +122,22 @@
         }
 
         .menu-bar {
-            margin-top: 25px; /* Adjusted for spacing */
-            font-size: 14px;
+            margin-top: 15px; /* Adjusted for spacing */
+            font-size: 10px; /* Reduced font size for the mini menu */
             font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 5px; /* Reduced gap between menu items */
         }
 
         .menu-bar span {
             color: white;
             cursor: pointer;
             position: relative;
-            padding: 0 5px;
+            padding: 7px 3px; /* Increased padding for menu items */
             transition: color 0.3s;
+            font-size: 12px; /* Increased font size for menu items */
         }
 
         .menu-bar span:hover {
@@ -146,7 +147,7 @@
         }
 
         .menu-bar .divider {
-            height: 15px;
+            height: 15px; /* Increased height for the divider */
             width: 1px;
             background-color: white;
         }
@@ -177,7 +178,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 12px; /* Smaller font size for small buttons */
+            font-size: 10px; /* Smaller font size for small buttons */
             margin: 10px 5px 0;
             transition: background-color 0.3s, color 0.3s, border 0.3s;
         }
@@ -290,7 +291,7 @@
         }
 
         function openEmailClient() {
-            window.location.href = "mailto:elle.wint.1@.com";
+            window.location.href = "mailto:elle.wint.1@gmail.com"; // Your email here
         }
 
         function showMinorArcana() {
@@ -311,5 +312,5 @@
             document.getElementById("other").classList.remove("active");
         }
     </script>
-</body>
+</body> 
 </html>
