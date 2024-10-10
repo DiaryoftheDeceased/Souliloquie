@@ -21,10 +21,10 @@
             background-color: #000;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 375px; /* Width adjusted to match Instagram */
+            max-width: 350px; /* Width remains consistent */
             width: 100%;
-            height: 500px; /* Fixed height to create a rectangular shape */
-            margin-top: 20px;
+            height: 450px; /* Increased height for elongation */
+            margin-top: 20px; /* Adjust margin as needed */
             text-align: center;
             position: relative;
             padding: 20px;
@@ -124,19 +124,19 @@
 
         .menu-bar {
             margin-top: 25px; /* Adjusted for spacing */
-            font-size: 16px; /* Slightly increased for better visibility */
+            font-size: 14px;
             font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px; /* Increased gap for better spacing */
+            gap: 10px;
         }
 
         .menu-bar span {
             color: white;
             cursor: pointer;
             position: relative;
-            padding: 5px 10px; /* Increased padding for better button size */
+            padding: 0 5px;
             transition: color 0.3s;
         }
 
@@ -148,7 +148,7 @@
 
         .menu-bar .divider {
             height: 15px;
-            width: 2px; /* Increased width of divider */
+            width: 1px;
             background-color: white;
         }
 
@@ -295,21 +295,21 @@
         }
 
         function showMinorArcana() {
-            document.getElementById("minorArcana").classList.add("active");
-            document.getElementById("majorArcana").classList.remove("active"); 
-            document.getElementById("other").classList.remove("active"); 
-        }
-
-        function showOther() {
-            document.getElementById("other").classList.add("active");
-            document.getElementById("minorArcana").classList.remove("active");
-            document.getElementById("majorArcana").classList.remove("active");
+            document.getElementById("minorArcana").style.display = "block";
+            document.getElementById("majorArcana").style.display = "none";
+            document.getElementById("other").style.display = "none";
         }
 
         function resetPage() {
-            document.getElementById("minorArcana").classList.remove("active");
-            document.getElementById("majorArcana").classList.remove("active");
-            document.getElementById("other").classList.remove("active");
+            document.getElementById("minorArcana").style.display = "none";
+            document.getElementById("majorArcana").style.display = "none";
+            document.getElementById("other").style.display = "none";
+        }
+
+        function showOther() {
+            document.getElementById("other").style.display = "block";
+            document.getElementById("minorArcana").style.display = "none";
+            document.getElementById("majorArcana").style.display = "none";
         }
     </script>
 </body>
