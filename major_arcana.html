@@ -146,9 +146,34 @@
             cursor: pointer; /* Changes cursor to pointer */
         }
 
+        .empyrean-garden {
+            background: linear-gradient(90deg, yellow, green); /* Gradient from yellow to green */
+            -webkit-background-clip: text; /* Clip the background to text */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .empyrean-garden:hover {
+            text-shadow: 0 0 5px yellow, 0 0 10px green; /* Add a glowing effect on hover */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        .nights-skyline {
+            background: linear-gradient(90deg, hotpink, magenta); /* Gradient from hotpink to magenta */
+            -webkit-background-clip: text; /* Clip the background to text */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .nights-skyline:hover {
+            text-shadow: 0 0 5px hotpink, 0 0 10px magenta; /* Add a glowing effect on hover */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
         .left-align {
             text-align: left; /* Align these items to the left */
         }
+
     </style>
 </head>
 <body>
@@ -166,8 +191,8 @@
         <div class="arcana-list">
             <div class="arcana-item left-align">0 - <a href="j_rtpf_entries.html" class="arcana-highlight">Journie: Retrieve the purple flower.</a></div> <!-- Updated Item with Link -->
             <div class="arcana-item left-align">I - <a href="your_link_here.html" class="golden-excuse">The Golden Excuse</a></div> <!-- Updated with Gradient and Link -->
-            <div class="arcana-item">II - [locked]</div>
-            <div class="arcana-item">III - [locked]</div>
+            <div class="arcana-item">II - <a href="#" class="empyrean-garden">The Empyrean Garden</a></div> <!-- Added Empyrean Garden -->
+            <div class="arcana-item">III - <a href="#" class="nights-skyline">The Night's Skyline</a></div> <!-- Added The Night's Skyline -->
             <div class="arcana-item">IV - [locked]</div>
             <div class="arcana-item">V - [locked]</div>
             <div class="arcana-item">VI - [locked]</div>
