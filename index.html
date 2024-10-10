@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <style>
-        /* Main styles for the profile page */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -21,14 +20,14 @@
             background-color: #000;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 350px; /* Width remains consistent */
+            max-width: 400px;
             width: 100%;
-            height: 450px; /* Increased height for elongation */
-            margin-top: 20px; /* Adjust margin as needed */
+            margin-top: 20px;
             text-align: center;
             position: relative;
-            padding: 20px;
+            padding: 30px;
             border: 2px solid white;
+            height: 550px;
         }
 
         .header-image {
@@ -76,7 +75,7 @@
             background-image: linear-gradient(90deg, pink, yellow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text; /* Add for Firefox */
+            background-clip: text;
             transition: color 0.3s;
         }
 
@@ -90,7 +89,7 @@
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-top: 20px; /* Adjusted to add more space above the message button */
+            margin-top: 20px;
         }
 
         button {
@@ -123,7 +122,7 @@
         }
 
         .menu-bar {
-            margin-top: 25px; /* Adjusted for spacing */
+            margin-top: 25px;
             font-size: 14px;
             font-weight: bold;
             display: flex;
@@ -161,9 +160,9 @@
         }
 
         .minor-arcana-text {
-            color: white; /* Make the text white */
-            text-align: center; /* Center the text */
-            margin: 70px 0; /* Adjust margin to scoot the sentence down */
+            color: white;
+            text-align: center;
+            margin: 70px 0;
         }
 
         .arcana-buttons {
@@ -172,31 +171,31 @@
 
         .arcana-button {
             display: inline-block;
-            padding: 5px 10px; /* Smaller padding for small buttons */
+            padding: 5px 10px;
             background-color: white;
             color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 12px; /* Smaller font size for small buttons */
+            font-size: 12px;
             margin: 10px 5px 0;
             transition: background-color 0.3s, color 0.3s, border 0.3s;
         }
 
         .arcana-button.major:hover {
             background-color: black;
-            background-image: linear-gradient(90deg, red, orange, magenta); /* Updated hover color */
-            color: transparent; /* Hide text color */
+            background-image: linear-gradient(90deg, red, orange, magenta);
+            color: transparent;
             border: 1px solid white;
-            -webkit-background-clip: text; /* Clip gradient to text */
+            -webkit-background-clip: text;
         }
 
         .arcana-button.minor:hover {
             background-color: black;
-            background-image: linear-gradient(90deg, magenta, purple, blue); /* Updated hover color */
-            color: transparent; /* Hide text color */
+            background-image: linear-gradient(90deg, magenta, purple, blue);
+            color: transparent;
             border: 1px solid white;
-            -webkit-background-clip: text; /* Clip gradient to text */
+            -webkit-background-clip: text;
         }
 
         .small-boxes {
@@ -225,14 +224,12 @@
             background-color: #ffffff;
         }
 
-        /* New rule to remove underline from Major Arcana link */
         .menu-bar a {
-            text-decoration: none; /* Remove underline */
+            text-decoration: none;
         }
 
-        /* New rule to make Minor Arcana button bold */
         .arcana-button.minor {
-            font-weight: bold; /* Make the button bold */
+            font-weight: bold;
         }
 
     </style>
@@ -264,19 +261,17 @@
             <div class="divider"></div>
             <a href="major_arcana.html" class="arcana-button major">Major Arcana</a>
             <div class="divider"></div>
-            <span onclick="showOther()">Other</span> <!-- Added "Other" option -->
+            <span onclick="showOther()">Other</span>
         </div>
 
         <div class="section" id="minorArcana">
-            <p class="minor-arcana-text">Minor Arcana arriving later.</p> <!-- Updated content -->
+            <p class="minor-arcana-text">Minor Arcana arriving later.</p>
         </div>
 
         <div class="section" id="majorArcana" style="display: none;">
-            <!-- Content for Major Arcana section goes here -->
         </div>
 
         <div class="section" id="other" style="display: none;">
-            <!-- Content for Other section goes here -->
         </div>
     </div>
 
@@ -284,33 +279,32 @@
         function requestAccess() {
             let code = prompt("Enter access code:");
             if (code === "yourCode") {
-                // Popup functionality removed
             } else {
                 alert("Incorrect code.");
             }
         }
 
         function openEmailClient() {
-            window.location.href = "mailto:elle.wint.1@gmail.com"; // Your email here
+            window.location.href = "mailto:elle.wint.1@gmail.com";
         }
 
         function showMinorArcana() {
-            document.getElementById("minorArcana").style.display = "block";
-            document.getElementById("majorArcana").style.display = "none";
-            document.getElementById("other").style.display = "none";
-        }
-
-        function resetPage() {
-            document.getElementById("minorArcana").style.display = "none";
-            document.getElementById("majorArcana").style.display = "none";
-            document.getElementById("other").style.display = "none";
+            document.getElementById("minorArcana").classList.add("active");
+            document.getElementById("majorArcana").classList.remove("active"); 
+            document.getElementById("other").classList.remove("active"); 
         }
 
         function showOther() {
-            document.getElementById("other").style.display = "block";
-            document.getElementById("minorArcana").style.display = "none";
-            document.getElementById("majorArcana").style.display = "none";
+            document.getElementById("other").classList.add("active");
+            document.getElementById("minorArcana").classList.remove("active");
+            document.getElementById("majorArcana").classList.remove("active");
+        }
+
+        function resetPage() {
+            document.getElementById("minorArcana").classList.remove("active");
+            document.getElementById("majorArcana").classList.remove("active");
+            document.getElementById("other").classList.remove("active");
         }
     </script>
-</body>
+</body> 
 </html>
