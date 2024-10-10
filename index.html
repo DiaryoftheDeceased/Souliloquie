@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>Major Arcana</title>
     <style>
         /* Main styles for the profile page */
         body {
@@ -24,7 +24,6 @@
             max-width: 400px;
             width: 100%;
             margin-top: 20px;
-            text-align: center;
             position: relative;
             padding: 20px;
             border: 2px solid white;
@@ -49,10 +48,33 @@
             font-size: 24px;
         }
 
+        .back-button {
+            background-color: white; /* White background */
+            color: black; /* Black text */
+            border: 2px solid transparent; /* No border by default */
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: border 0.3s, color 0.3s, background 0.3s; /* Transition for border, color, and background */
+            margin-top: 10px; /* Space above the button */
+            width: 100%; /* Make the button full width */
+        }
+
+        .back-button:hover {
+            border: 2px solid white; /* White border on hover */
+            color: transparent; /* Make the text transparent */
+            background: linear-gradient(90deg, blue, orange); /* Gradient background */
+            background-clip: text; /* Clip the background to text */
+            -webkit-background-clip: text; /* For Safari */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+        }
+
         .profile-header {
             position: relative;
             top: -50px;
             margin-bottom: -40px;
+            text-align: center; /* Center the header */
         }
 
         .profile-header img {
@@ -61,222 +83,137 @@
             border-radius: 50%;
             border: 3px solid white;
             background-color: white;
+            display: block; /* Makes the image a block element */
+            margin: 0 auto; /* Centers the image horizontally */
         }
 
-        .profile-info h2 {
-            margin: 0;
-            font-size: 20px;
-            color: white;
-        }
-
-        .username {
-            margin: 5px 0;
-            font-size: 16px;
-            background-image: linear-gradient(90deg, pink, yellow);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text; /* Add for Firefox */
-            transition: color 0.3s;
-        }
-
-        .bio {
+        .arcana-title {
             margin: 10px 0;
+            font-size: 16px; /* Smaller font size */
             color: white;
-            font-size: 14px;
+            text-align: right; /* Align title to the right */
         }
 
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px; /* Adjusted to add more space above the message button */
-        }
-
-        button {
-            background-color: #e6b753;
+        .arcana-subtitle {
+            margin: 5px 0;
+            font-size: 14px; /* Smaller font size */
             color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+            text-align: left; /* Align subtitle to the left */
         }
 
-        .message-button {
-            background-color: white;
-            color: black;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s, color 0.3s, border 0.3s;
-        }
-
-        .message-button:hover {
-            background-color: transparent;
-            background-image: linear-gradient(90deg, yellow, orange, purple, blue);
-            -webkit-background-clip: text;
-            color: transparent;
-            border: 2px solid white;
-        }
-
-        .menu-bar {
-            margin-top: 25px; /* Adjusted for spacing */
-            font-size: 14px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .menu-bar span {
+        .arcana-list {
             color: white;
-            cursor: pointer;
-            position: relative;
-            padding: 0 5px;
-            transition: color 0.3s;
-        }
-
-        .menu-bar span:hover {
-            background-image: linear-gradient(90deg, #ff0000, #ff9900, #ff0055, purple, blue);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        .menu-bar .divider {
-            height: 15px;
-            width: 1px;
-            background-color: white;
-        }
-
-        .section {
-            display: none;
-        }
-
-        .active {
-            display: block;
-        }
-
-        .minor-arcana-text {
-            color: white; /* Make the text white */
-            text-align: center; /* Center the text */
-            margin: 70px 0; /* Adjust margin to scoot the sentence down */
-        }
-
-        .arcana-buttons {
-            margin-top: 15px;
-        }
-
-        .arcana-button {
-            display: inline-block;
-            padding: 5px 10px; /* Smaller padding for small buttons */
-            background-color: white;
-            color: black;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 12px; /* Smaller font size for small buttons */
-            margin: 10px 5px 0;
-            transition: background-color 0.3s, color 0.3s, border 0.3s;
-        }
-
-        .arcana-button.major:hover {
-            background-color: black;
-            background-image: linear-gradient(90deg, red, orange, magenta); /* Updated hover color */
-            color: transparent; /* Hide text color */
-            border: 1px solid white;
-            -webkit-background-clip: text; /* Clip gradient to text */
-        }
-
-        .arcana-button.minor:hover {
-            background-color: black;
-            background-image: linear-gradient(90deg, magenta, purple, blue); /* Updated hover color */
-            color: transparent; /* Hide text color */
-            border: 1px solid white;
-            -webkit-background-clip: text; /* Clip gradient to text */
-        }
-
-        .small-boxes {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
             margin-top: 20px;
+            text-align: right; /* Align list items to the right */
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
         }
 
-        .small-box {
-            width: 100px;
-            height: 120px;
-            background-color: #ffffff;
-            color: #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px;
-            font-size: 12px;
-            text-align: center;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .arcana-item {
+            padding: 5px;
+            border-bottom: 1px solid #444;
+            font-size: 12px; /* Smaller font size for the list items */
+            text-align: right; /* Align individual items to the right */
         }
 
-        .small-box:hover {
-            background-color: #ffffff;
+        .arcana-item:last-child {
+            border-bottom: none;
         }
 
-        /* New rule to remove underline from Major Arcana link */
-        .menu-bar a {
-            text-decoration: none; /* Remove underline */
+        .arcana-highlight {
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+            text-decoration: none; /* Remove underline from link */
         }
 
-        /* New rule to make Minor Arcana button bold */
-        .arcana-button.minor {
-            font-weight: bold; /* Make the button bold */
+        .arcana-highlight:hover {
+            background: linear-gradient(90deg, orange, purple, blue); /* Gradient effect */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+            text-shadow: 0 0 5px purple, 0 0 10px blue; /* Add a glowing effect */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        /* New class for the Golden Excuse link */
+        .golden-excuse {
+            background: linear-gradient(90deg, orange, yellow); /* Gradient from orange to yellow */
+            -webkit-background-clip: text; /* Clip the background to text */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .golden-excuse:hover {
+            text-shadow: 0 0 5px orange, 0 0 10px yellow; /* Add a glowing effect on hover */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        .empyrean-garden {
+            background: linear-gradient(90deg, yellow, green); /* Gradient from yellow to green */
+            -webkit-background-clip: text; /* Clip the background to text */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .empyrean-garden:hover {
+            text-shadow: 0 0 5px yellow, 0 0 10px green; /* Add a glowing effect on hover */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        .nights-skyline {
+            background: linear-gradient(90deg, hotpink, magenta); /* Gradient from hotpink to magenta */
+            -webkit-background-clip: text; /* Clip the background to text */
+            -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+
+        .nights-skyline:hover {
+            text-shadow: 0 0 5px hotpink, 0 0 10px magenta; /* Add a glowing effect on hover */
+            cursor: pointer; /* Changes cursor to pointer */
+        }
+
+        .left-align {
+            text-align: left; /* Align these items to the left */
         }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header-image" id="headerImage" style="background-image: url('images/uwc1.jpg');">
-            <button class="dev-button" onclick="requestAccess()">😊</button>
+        <div class="header-image" id="headerImage" style="background-image: url('C:\\Users\\Amaya\\Downloads\\moi\\uwc1.jpg');">
+            <!-- Smiley face button removed -->
         </div>
         <div class="profile-header">
-            <img id="profileImage" src="images/uwcpfp.jpg" alt="Profile Picture">
+            <img id="profileImage" src="C:\\Users\\Amaya\\Downloads\\moi\\uwcpfp.jpg" alt="Profile Picture">
         </div>
 
-        <div class="profile-info">
-            <h2>𝔼</h2>
-            <p class="username">@elledritch</p>
+        <div class="arcana-title">Major Arcana</div> <!-- Title Added Here -->
+        <div class="arcana-subtitle">(formerly Diary of the Deceased)</div> <!-- Mini Heading Added Here -->
+
+        <div class="arcana-list">
+            <div class="arcana-item left-align">0 - <a href="j_rtpf_entries.html" class="arcana-highlight">Journie: Retrieve the purple flower.</a></div> <!-- Updated Item with Link -->
+            <div class="arcana-item left-align">I - <a href="your_link_here.html" class="golden-excuse">The Golden Excuse</a></div> <!-- Updated with Gradient and Link -->
+            <div class="arcana-item">II - <a href="#" class="empyrean-garden">The Empyrean Garden</a></div> <!-- Added Empyrean Garden -->
+            <div class="arcana-item">III - <a href="#" class="nights-skyline">The Night's Skyline</a></div> <!-- Added The Night's Skyline -->
+            <div class="arcana-item">IV - [locked]</div>
+            <div class="arcana-item">V - [locked]</div>
+            <div class="arcana-item">VI - [locked]</div>
+            <div class="arcana-item">VII - [locked]</div>
+            <div class="arcana-item">VIII - [locked]</div>
+            <div class="arcana-item">IX - [locked]</div>
+            <div class="arcana-item">X - [locked]</div>
+            <div class="arcana-item">XI - [locked]</div>
+            <div class="arcana-item">XII - [locked]</div>
+            <div class="arcana-item">XIII - [locked]</div>
+            <div class="arcana-item">XIV - [locked]</div>
+            <div class="arcana-item">XV - [locked]</div>
+            <div class="arcana-item">XVI - [locked]</div>
+            <div class="arcana-item">XVII - [locked]</div>
+            <div class="arcana-item">XVIII - [locked]</div>
+            <div class="arcana-item">XIX - [locked]</div>
+            <div class="arcana-item">XX - [locked]</div>
+            <div class="arcana-item">XXI - [locked]</div>
         </div>
 
-        <p class="bio">This is a bio. Tell us about yourself!</p>
-
-        <div class="action-buttons">
-            <button class="message-button" onclick="openEmailClient()">Message</button>
-        </div>
-
-        <div class="menu-bar">
-            <span onclick="resetPage()">Home</span>
-            <div class="divider"></div>
-            <button class="arcana-button minor" onclick="showMinorArcana()">Minor Arcana</button>
-            <div class="divider"></div>
-            <a href="major_arcana.html" class="arcana-button major">Major Arcana</a>
-            <div class="divider"></div>
-            <span onclick="showOther()">Other</span> <!-- Added "Other" option -->
-        </div>
-
-        <div class="section" id="minorArcana">
-            <p class="minor-arcana-text">Minor Arcana arriving later.</p> <!-- Updated content -->
-        </div>
-
-        <div class="section" id="majorArcana" style="display: none;">
-            <!-- Content for Major Arcana section goes here -->
-        </div>
-
-        <div class="section" id="other" style="display: none;">
-            <!-- Content for Other section goes here -->
-        </div>
+        <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button -->
     </div>
 
     <script>
@@ -289,26 +226,9 @@
             }
         }
 
-        function openEmailClient() {
-            window.location.href = "mailto:youremail@example.com";
-        }
-
-        function showMinorArcana() {
-            document.getElementById("minorArcana").classList.add("active");
-            document.getElementById("majorArcana").classList.remove("active");
-            document.getElementById("other").classList.remove("active");
-        }
-
-        function showOther() {
-            document.getElementById("other").classList.add("active");
-            document.getElementById("minorArcana").classList.remove("active");
-            document.getElementById("majorArcana").classList.remove("active");
-        }
-
-        function resetPage() {
-            document.getElementById("minorArcana").classList.remove("active");
-            document.getElementById("majorArcana").classList.remove("active");
-            document.getElementById("other").classList.remove("active");
+        function goBack() {
+            // Logic to go back to the previous page
+            window.history.back();
         }
     </script>
 </body>
