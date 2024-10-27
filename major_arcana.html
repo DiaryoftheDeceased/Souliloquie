@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Arcana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center container horizontally */
+            justify-content: center; /* Center container vertically */
+            min-height: 100vh;
+            background-color: #000;
+        }
+
+        .container {
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            max-width: 300px; /* Set width to 300px to match previous page */
+            width: 100%;
+            margin-top: 20px;
+            position: relative;
+            padding: 30px; /* Adjusted padding */
+            border: 2px solid white;
+            height: auto; /* Allow height to adjust based on content */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the top */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .back-button {
+            background-color: white;
+            color: black;
+            border: 2px solid transparent;
+            padding: 8px 12px; /* Adjusted padding */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: border 0.3s, color 0.3s, background 0.3s;
+            margin-top: 20px; /* Space above the button */
+            width: 100%;
+            text-align: center; /* Center button text */
+        }
+
+        .back-button:hover {
+            border: 2px solid white;
+            color: transparent;
+            background: linear-gradient(90deg, blue, orange);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .arcana-title {
+            margin: 10px 0; /* Decreased top margin */
+            font-size: 20px; /* Increased font size */
+            color: white;
+            text-align: center; /* Center title text */
+        }
+
+        .arcana-subtitle {
+            margin: 2px 0; /* Decreased margin for closer placement */
+            font-size: 12px; /* Smaller font size */
+            color: white;
+            text-align: center; /* Center subtitle text */
+            width: 100%; /* Make subtitle full width */
+        }
+
+        .arcana-list {
+            color: white;
+            margin-top: 20px;
+            text-align: right; /* Align text to the right */
+            list-style-type: none; /* No bullet points */
+            padding: 0;
+            overflow-y: auto; /* Enable scrolling for long lists */
+            max-height: 400px; /* Limit height for the list */
+            width: 100%; /* Make list full width */
+        }
+
+        .arcana-item {
+            padding: 5px;
+            border-bottom: 1px solid #444;
+            font-size: 12px;
+        }
+
+        .arcana-item:last-child {
+            border-bottom: none;
+        }
+
+        .left-align {
+            text-align: left; /* Align specific items to the left */
+        }
+
+        .arcana-highlight, .golden-excuse, .empyrean-garden, .she-is {
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .arcana-highlight:hover {
+            background: linear-gradient(90deg, orange, purple, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 5px purple, 0 0 10px blue;
+            cursor: pointer;
+        }
+
+        .golden-excuse {
+            background: linear-gradient(90deg, orange, yellow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: color 0.3s ease;
+        }
+
+        .golden-excuse:hover {
+            text-shadow: 0 0 5px orange, 0 0 10px yellow;
+            cursor: pointer;
+        }
+
+        .empyrean-garden {
+            background: linear-gradient(90deg, #00ff00, green);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: color 0.3s ease;
+        }
+
+        .empyrean-garden:hover {
+            text-shadow: 0 0 5px #ffff00, 0 0 10px green;
+            cursor: pointer;
+        }
+
+        .she-is {
+            background: linear-gradient(90deg, hotpink, magenta);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: text-shadow 0.3s ease;
+        }
+
+        .she-is:hover {
+            text-shadow: 0 0 5px magenta, 0 0 10px magenta;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="arcana-title">Major Arcana</div>
+        <div class="arcana-subtitle">(formerly Diary of the Deceased)</div>
+
+        <div class="arcana-list">
+            <div class="arcana-item left-align">0 - <a href="/major_arcana_entries/j_rtpf_entries.html" class="arcana-highlight">Journie: Retrieve the purple flower.</a></div>
+            <div class="arcana-item left-align">I - <a href="#" class="golden-excuse">The Golden Excuse</a></div>
+            <div class="arcana-item">II - <a href="#" class="empyrean-garden">The Empyrean Garden</a></div>
+            <div class="arcana-item">III - <a href="#" class="she-is">She is. . .</a></div>
+            <div class="arcana-item">IV - [locked]</div>
+            <div class="arcana-item">V - [locked]</div>
+            <div class="arcana-item">VI - [locked]</div>
+            <div class="arcana-item">VII - [locked]</div>
+            <div class="arcana-item">VIII - [locked]</div>
+            <div class="arcana-item">IX - [locked]</div>
+            <div class="arcana-item">X - [locked]</div>
+            <div class="arcana-item">XI - [locked]</div>
+            <div class="arcana-item">XII - [locked]</div>
+            <div class="arcana-item">XIII - [locked]</div>
+            <div class="arcana-item">XIV - [locked]</div>
+            <div class="arcana-item">XV - [locked]</div>
+            <div class="arcana-item">XVI - [locked]</div>
+            <div class="arcana-item">XVII - [locked]</div>
+            <div class="arcana-item">XVIII - [locked]</div>
+            <div class="arcana-item">XIX - [locked]</div>
+            <div class="arcana-item">XX - [locked]</div>
+            <div class="arcana-item">XXI - [locked]</div>
+        </div>
+
+        <button class="back-button" onclick="goBack()">Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
