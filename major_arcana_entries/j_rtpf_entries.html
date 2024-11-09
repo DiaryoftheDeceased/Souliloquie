@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journie: Retrieve the Purple Flower</title>
+    <style>
+        /* Main styles for the new page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000; /* Black background */
+        }
+
+        .container {
+            background-color: #000;
+            border: 2px solid white; /* White border */
+            border-radius: 8px;
+            padding: 40px 20px; /* Increased padding for better spacing */
+            max-width: 300px; /* Set max width to 300px */
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the top */
+        }
+
+        .back-button {
+            background-color: white; /* White background */
+            color: black; /* Black text */
+            border: 2px solid white; /* White border */
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s, color 0.3s, border 0.3s;
+            margin-top: auto; /* Push button to the bottom */
+            width: 100%; /* Make the button full width */
+        }
+
+        .back-button:hover {
+            color: transparent; /* Text transparent for gradient effect */
+            background: linear-gradient(90deg, orange, red); /* Gradient background */
+            -webkit-background-clip: text; /* Clip text to background */
+            -webkit-text-fill-color: transparent; /* Makes text transparent */
+        }
+
+        .title {
+            color: white;
+            font-size: 16px; /* Smaller title font size */
+            margin-bottom: 10px; /* Space below title */
+        }
+
+        .item {
+            color: white;
+            font-size: 16px; /* Font size for items */
+            padding: 10px;
+            border-bottom: 1px solid #444; /* Divider between items */
+            text-decoration: none; /* Remove underline */
+            display: block; /* Makes items stack vertically */
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .item:hover {
+            background: linear-gradient(90deg, orange, purple, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .item:last-child {
+            border-bottom: none; /* Remove border from last item */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Journie: Retrieve the Purple Flower</div>
+        <a class="item" href="/jtrtpfe/j_r_t_p_f_prologue.html">Prologue</a>
+        <a class="item" href="/jtrtpfe/j_r_t_p_f_q_1.html">1</a>
+        <a class="item" href="/jtrtpfe/j_r_t_p_f_q_2.html">2</a>
+        <a class="item" href="/jtrtpfe/j_r_t_p_f_q_3.html">3</a>
+        <a class="item" href="/jtrtpfe/j_r_t_p_f_intermission.html">Intermission</a>
+        <a class="item" href="/jtrtpfe/j_r_t_p_f_q_4.html">4</a>
+        <a class="item" href="/jtrtpfe/j_r_t_p_f_q_5.html">5</a>
+        
+        <button class="back-button" onclick="goBack()">Back</button> <!-- Back Button added here -->
+    </div>
+
+    <script>
+        function goBack() {
+            // Logic to go back to the previous page
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
