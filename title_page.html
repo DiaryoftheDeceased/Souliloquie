@@ -12,7 +12,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Center content vertically */
+            justify-content: center;
             min-height: 100vh;
             background-color: #000;
         }
@@ -21,17 +21,17 @@
             background-color: #000;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 250px; /* Increased width */
+            max-width: 250px;
             width: 100%;
             text-align: center;
             position: relative;
             padding: 30px;
             border: 2px solid white;
-            height: 200px; /* Adjusted height */
-            display: flex; /* Use flexbox for centering */
-            flex-direction: column; /* Stack items vertically */
-            justify-content: center; /* Center items vertically */
-            align-items: center; /* Center items horizontally */
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .profile-info h2 {
@@ -47,7 +47,7 @@
         }
 
         .menu-bar {
-            margin-top: 10px; /* Adjusted margin */
+            margin-top: 10px;
             font-size: 14px;
             font-weight: bold;
             display: flex;
@@ -64,16 +64,16 @@
 
         .arcana-button {
             display: inline-block;
-            padding: 8px 12px; /* Adjusted padding */
+            padding: 8px 12px;
             background-color: white;
             color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px; /* Font size back to original */
+            font-size: 14px;
             transition: background-color 0.3s, color 0.3s, border 0.3s;
-            text-decoration: none; /* Remove underline */
-            font-weight: normal; /* Set font weight to normal */
+            text-decoration: none;
+            font-weight: normal;
         }
 
         .arcana-button.major:hover {
@@ -91,17 +91,6 @@
             border: 1px solid white;
             -webkit-background-clip: text;
         }
-
-        .section {
-            display: none;
-            color: white; /* Make the text color white */
-            margin-top: 10px; /* Add some spacing */
-            text-align: center; /* Center the text */
-        }
-
-        .active {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -113,21 +102,10 @@
         <p class="bio">Magic specialist documenting the vision.</p>
 
         <div class="menu-bar">
-            <button class="arcana-button minor" onclick="toggleMinorArcana()">Minor Arcana</button>
+            <a href="minor_arcana.html" class="arcana-button minor">Minor Arcana</a>
             <div class="divider"></div>
             <a href="major_arcana.html" class="arcana-button major">Major Arcana</a>
         </div>
-
-        <div class="section" id="minorArcana">
-            <p class="minor-arcana-text">Minor Arcana arriving later.</p>
-        </div>
     </div>
-
-    <script>
-        function toggleMinorArcana() {
-            const minorArcanaSection = document.getElementById("minorArcana");
-            minorArcanaSection.classList.toggle("active");
-        }
-    </script>
 </body> 
 </html>
