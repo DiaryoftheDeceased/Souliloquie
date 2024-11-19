@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Museum</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant', serif;
+            background: linear-gradient(135deg, white, #f5f5f5 50%, white 100%);
+        }
+
+        /* Container Styles for Art Gallery */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80%;
+            max-width: 1000px;
+            height: 80vh;
+        }
+
+        /* Art Shelf Styles (Horizontal Line) */
+        .shelf {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin: 20px 0;
+        }
+
+        /* Row of Art Boxes (above the shelf line) */
+        .art-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Individual Art Box */
+        .art-box {
+            background-color: black;
+            border-radius: 10px;
+            width: 250px; /* Increased box width */
+            height: 250px; /* Keeping it square */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem; /* Larger font size for the main text */
+            text-transform: uppercase;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            position: relative; /* To allow positioning the caption */
+            margin: 0 10px; /* Adding space between the boxes */
+        }
+
+        /* Caption below each Art Box */
+        .caption {
+            position: absolute;
+            bottom: -30px; /* Position the caption a bit further below the box */
+            width: 100%;
+            color: white;
+            font-size: 0.8rem; /* Smaller font size for the caption */
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- First Row of Art Boxes -->
+        <div class="art-row">
+            <div class="art-box">
+                Example 1
+                <div class="caption">Caption 1</div>
+            </div>
+            <div class="art-box">
+                Example 2
+                <div class="caption">Caption 2</div>
+            </div>
+        </div>
+
+        <!-- Shelf 1 -->
+        <div class="shelf"></div>
+
+        <!-- Second Row of Art Boxes -->
+        <div class="art-row">
+            <div class="art-box">
+                Example 3
+                <div class="caption">Caption 3</div>
+            </div>
+            <div class="art-box">
+                Example 4
+                <div class="caption">Caption 4</div>
+            </div>
+        </div>
+
+        <!-- Shelf 2 -->
+        <div class="shelf"></div>
+    </div>
+</body>
+</html>

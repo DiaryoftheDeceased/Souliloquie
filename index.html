@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Page</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant', serif; /* Applied Cormorant font */
+            background: linear-gradient(135deg, white, #f5f5f5 50%, white 100%);
+        }
+
+        /* Container Styles */
+        .container {
+            background-color: black;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            max-width: 300px;
+            width: 100%;
+        }
+
+        /* Access Code Styles */
+        .access-code-label {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .access-code-input {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            background-color: #333;
+            color: white;
+        }
+
+        /* Submit Button Styles */
+        .submit-button {
+            padding: 0.5rem 1rem; /* Smaller size */
+            font-size: 0.9rem; /* Reduced font size */
+            color: white;
+            border: 2px solid white;
+            background: linear-gradient(135deg, #d3d3d3, #808080); /* Grey ice effect */
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s, border-color 0.3s, transform 0.2s;
+        }
+
+        .submit-button:hover {
+            background: linear-gradient(135deg, #c0c0c0, #a9a9a9);
+            border-color: #a9a9a9;
+            transform: scale(1.05); /* Slight enlargement on hover */
+        }
+    </style>
+    <script>
+        function handleAccessCode() {
+            const input = document.getElementById('access-code').value.trim();
+            if (input === "1234") { // Replace "1234" with your desired access code
+                window.location.href = "main_page.html"; // Redirect to Main Page
+            } else {
+                alert("Invalid Access Code");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Access Code Form -->
+        <label for="access-code" class="access-code-label">Enter Access Code</label>
+        <input type="text" id="access-code" class="access-code-input" placeholder="Access Code">
+        <button class="submit-button" onclick="handleAccessCode()">Submit</button>
+    </div>
+</body>
+</html>
