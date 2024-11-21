@@ -31,24 +31,19 @@
             width: 100%;
         }
 
-        /* Button Styles */
-        .button {
-            display: inline-block;
-            padding: 0.5rem 1rem;
+        /* Link Styles */
+        .text-link {
             font-size: 1rem;
             color: white;
-            border: 2px solid white;
-            background-color: transparent;
-            border-radius: 6px;
+            margin: 0.5rem 0;
             text-transform: uppercase;
-            cursor: pointer;
             text-decoration: none;
-            transition: background 0.3s, border-color 0.3s;
+            display: inline-block;
+            transition: color 0.3s ease;
         }
 
-        .button:hover {
-            background: linear-gradient(135deg, #d3d3d3, #808080); /* Grey ice effect */
-            border-color: #a9a9a9;
+        .text-link:hover {
+            color: #a9a9a9; /* Lighter grey on hover */
         }
 
         /* Divider Styles */
@@ -61,37 +56,15 @@
     </style>
 </head>
 <body>
-    <div class="container" id="container">
-        <!-- Button: E: OHW -->
-        <a href="e_o_h_w.html" class="button">E: OHW</a>
+    <div class="container">
+        <!-- Link: E: OHW -->
+        <a href="e_o_h_w.html" class="text-link">E: OHW</a>
 
         <!-- Divider -->
         <div class="divider"></div>
 
-        <!-- Button: Art Museum -->
-        <a href="art_museum.html" class="button">Art Museum</a>
+        <!-- Link: Art Museum -->
+        <a href="art_museum.html" class="text-link">Art Museum</a>
     </div>
-
-    <script>
-        // Function to save the state of the container
-        function savePageState() {
-            const containerContent = document.getElementById('container').innerHTML;
-            sessionStorage.setItem('mainPageState', containerContent);
-        }
-
-        // Function to restore the state of the container
-        function restorePageState() {
-            const savedState = sessionStorage.getItem('mainPageState');
-            if (savedState) {
-                document.getElementById('container').innerHTML = savedState;
-            }
-        }
-
-        // Restore state on page load
-        window.onload = restorePageState;
-
-        // Save state before leaving the page
-        window.onbeforeunload = savePageState;
-    </script>
 </body>
 </html>
