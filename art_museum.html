@@ -4,109 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Museum</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            width: 100%;
-            height: 100%;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Cormorant', serif;
-            background: linear-gradient(135deg, white, #f5f5f5 50%, white 100%);
+            flex-direction: column;
+            align-items: center; /* Center container horizontally */
+            justify-content: center; /* Center container vertically */
+            min-height: 100vh;
+            background-color: #fff; /* Background is white */
         }
 
-        /* Container Styles for Art Gallery */
         .container {
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 80%;
-            max-width: 1000px;
-            height: 80vh;
+            align-items: center; /* Center content horizontally */
+            width: 100%; /* Keep the container width flexible */
         }
 
-        /* Art Shelf Styles (Horizontal Line) */
-        .shelf {
-            width: 100%;
-            height: 2px;
-            background-color: black;
-            margin: 20px 0;
+        .gallery-list {
+            color: black; /* Text color is black */
+            margin-top: 20px;
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            overflow-y: auto;
+            max-height: 400px; /* Limit height for scrolling */
         }
 
-        /* Row of Art Boxes (above the shelf line) */
-        .art-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
+        .gallery-item {
+            padding: 5px;
+            border-bottom: 1px solid black; /* Line color is black */
+            font-size: 12px;
         }
 
-        /* Individual Art Box */
-        .art-box {
-            background-color: black;
-            border-radius: 10px;
-            width: 250px; /* Increased box width */
-            height: 250px; /* Keeping it square */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem; /* Larger font size for the main text */
-            text-transform: uppercase;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            position: relative; /* To allow positioning the caption */
-            margin: 0 10px; /* Adding space between the boxes */
+        .gallery-item:last-child {
+            border-bottom: none;
         }
 
-        /* Caption below each Art Box */
-        .caption {
-            position: absolute;
-            bottom: -30px; /* Position the caption a bit further below the box */
-            width: 100%;
-            color: white;
-            font-size: 0.8rem; /* Smaller font size for the caption */
-            text-transform: uppercase;
+        .gallery-highlight {
+            color: black; /* Text color is black */
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
         }
 
+        .gallery-highlight:hover {
+            background: linear-gradient(90deg, #000000, #555555); /* Black gradient hover effect */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 5px #cef0ff, 0 0 10px #75fff8;
+            cursor: pointer;
+        }
+
+        .back-button {
+            background-color: white;
+            color: black;
+            border: 2px solid black; /* Black border for contrast */
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: border 0.3s, color 0.3s, background 0.3s;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            border: 2px solid black;
+            color: transparent;
+            background: linear-gradient(90deg, blue, #e1daff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- First Row of Art Boxes -->
-        <div class="art-row">
-            <div class="art-box">
-                Example 1
-                <div class="caption">Caption 1</div>
-            </div>
-            <div class="art-box">
-                Example 2
-                <div class="caption">Caption 2</div>
-            </div>
-        </div>
+        <ul class="gallery-list">
+            <li class="gallery-item">
+                <a href="painting_one.html" class="gallery-highlight">Painting One</a>
+            </li>
+            <li class="gallery-item">[Locked]</li>
+            <li class="gallery-item">[Locked]</li>
+            <li class="gallery-item">[Locked]</li>
+            <li class="gallery-item">[Locked]</li>
+        </ul>
 
-        <!-- Shelf 1 -->
-        <div class="shelf"></div>
-
-        <!-- Second Row of Art Boxes -->
-        <div class="art-row">
-            <div class="art-box">
-                Example 3
-                <div class="caption">Caption 3</div>
-            </div>
-            <div class="art-box">
-                Example 4
-                <div class="caption">Caption 4</div>
-            </div>
-        </div>
-
-        <!-- Shelf 2 -->
-        <div class="shelf"></div>
+        <button class="back-button" onclick="goBack()">Back</button>
     </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "main_page.html"; // Redirects to the main page
+        }
+    </script>
 </body>
 </html>
