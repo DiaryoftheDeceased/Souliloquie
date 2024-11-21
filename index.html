@@ -49,32 +49,17 @@
             background-color: #333;
             color: white;
         }
-
-        /* Submit Button Styles */
-        .submit-button {
-            padding: 0.5rem 1rem; /* Smaller size */
-            font-size: 0.9rem; /* Reduced font size */
-            color: white;
-            border: 2px solid white;
-            background: linear-gradient(135deg, #d3d3d3, #808080); /* Grey ice effect */
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s, border-color 0.3s, transform 0.2s;
-        }
-
-        .submit-button:hover {
-            background: linear-gradient(135deg, #c0c0c0, #a9a9a9);
-            border-color: #a9a9a9;
-            transform: scale(1.05); /* Slight enlargement on hover */
-        }
     </style>
     <script>
-        function handleAccessCode() {
-            const input = document.getElementById('access-code').value.trim();
-            if (input === "1234") { // Replace "1234" with your desired access code
-                window.location.href = "main_page.html"; // Redirect to Main Page
-            } else {
-                alert("Invalid Access Code");
+        // Function to handle the Enter key and validate the access code
+        function handleKeyPress(event) {
+            if (event.key === "Enter") { // Check if the key pressed is Enter
+                const input = document.getElementById('access-code').value.trim();
+                if (input === "1234") { // Replace "1234" with your desired access code
+                    window.location.href = "main_page.html"; // Redirect to Main Page
+                } else {
+                    alert("Invalid Access Code");
+                }
             }
         }
     </script>
@@ -83,8 +68,12 @@
     <div class="container">
         <!-- Access Code Form -->
         <label for="access-code" class="access-code-label">Enter Access Code</label>
-        <input type="text" id="access-code" class="access-code-input" placeholder="Access Code">
-        <button class="submit-button" onclick="handleAccessCode()">Submit</button>
+        <input 
+            type="text" 
+            id="access-code" 
+            class="access-code-input" 
+            placeholder="Access Code" 
+            onkeypress="handleKeyPress(event)"> <!-- Trigger JavaScript on key press -->
     </div>
 </body>
 </html>
