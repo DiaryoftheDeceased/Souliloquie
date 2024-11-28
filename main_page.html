@@ -27,19 +27,23 @@
             padding: 2rem;
             text-align: center;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            max-width: 300px;
-            width: 100%;
+            width: 350px; /* Fixed width */
+            height: 370px; /* Fixed height */
+            background-image: url('./images/vines.jpg'); /* Updated relative file path */
+            background-size: cover; /* Ensures the image covers the entire container */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-position: center; /* Centers the background */
         }
 
         /* Link Styles */
         .text-link {
-            font-size: 1rem;
-            color: white;
-            margin: 0.5rem 0;
+            font-size: 80%; /* Set font size to 12% */
+            color: rgb(0, 0, 0);
             text-transform: uppercase;
             text-decoration: none;
             display: inline-block;
             transition: color 0.3s ease;
+            margin: 0.5rem 0;
         }
 
         .text-link:hover {
@@ -48,23 +52,64 @@
 
         /* Divider Styles */
         .divider {
-            height: 1px;
-            width: 100%;
-            background-color: white;
             margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .divider span {
+            width: 60%; /* Smaller width for the divider */
+            height: 1px;
+            background-color: rgb(0, 0, 0);
+            margin: 2px 0; /* Reduced spacing between the lines */
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Divider -->
+        <div class="space">
+            <span></span>
+            <span></span>
+        </div>
+        
         <!-- Link: E: OHW -->
         <a href="e_o_h_w.html" class="text-link">E: OHW</a>
 
         <!-- Divider -->
-        <div class="divider"></div>
+        <div class="divider">
+            <span></span>
+            <span></span>
+        </div>
 
         <!-- Link: Art Museum -->
         <a href="art_museum.html" class="text-link">Art Museum</a>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Link: Library -->
+        <a href="library.html" class="text-link">Library</a>
+
+        <!-- Divider -->
+        <div class="divider">
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Link: Diary -->
+        <a href="diary.html" class="text-link">Diary</a>
+
+        <div class="divider">
+            <span></span>
+            <span></span>
+        </div>
+
+        <a href="auditorium.html" class="text-link">Auditorium</a>
     </div>
 </body>
 </html>
