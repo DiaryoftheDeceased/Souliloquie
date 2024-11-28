@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Page</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
     <style>
@@ -22,32 +21,26 @@
 
         /* Container Styles */
         .container {
-            background-color: black;
+            background-image: url('C:/Users/Amaya/Downloads/Eulegy%20of%20Her%20Winter/images/front_vines.jpg'); /* Path to the image */
+            background-size: cover; /* Cover the entire container */
+            background-position: center; /* Center the background */
             border-radius: 10px;
-            padding: 2rem;
+            padding: 6rem;
             text-align: center;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
             max-width: 300px;
-            width: 100%;
+            width: 300%;
         }
-
-        /* Access Code Styles */
-        .access-code-label {
-            color: white;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
+        
         .access-code-input {
             width: 100%;
             padding: 0.5rem;
             font-size: 1rem;
-            border: 1px solid white;
+            border: 1px solid rgb(0, 0, 0);
             border-radius: 5px;
             margin-bottom: 1rem;
-            background-color: #333;
-            color: white;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
         }
     </style>
     <script>
@@ -67,7 +60,6 @@
 <body>
     <div class="container">
         <!-- Access Code Form -->
-        <label for="access-code" class="access-code-label">Enter Access Code</label>
         <input 
             type="text" 
             id="access-code" 
