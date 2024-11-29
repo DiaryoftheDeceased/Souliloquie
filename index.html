@@ -1,10 +1,9 @@
-m<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
@@ -46,25 +45,17 @@ m<!DOCTYPE html>
             font-family: 'Cormorant', serif; /* Font for the input field */
             text-align: center; /* Center the text inside the input */
         }
-
-        /* Changed font after entering access code */
-        .entered-code {
-            font-family: 'Cormorant', serif; /* Font for the entered code */
-        }
     </style>
     <script>
         // Function to handle the Enter key and validate the access code
         function handleKeyPress(event) {
             const input = document.getElementById('access-code');
             if (event.key === "Enter") { // Check if the key pressed is Enter
-                if (input.value.trim() === "december") { // Replace "1234" with your desired access code
+                if (input.value.trim() === "december") { // Replace "december" with your desired access code
                     window.location.href = "main_page.html"; // Redirect to Main Page
                 } else {
                     alert("Invalid Access Code");
                 }
-            } else {
-                // Change font to Cormorant while typing the code
-                input.classList.add('entered-code');
             }
         }
     </script>
