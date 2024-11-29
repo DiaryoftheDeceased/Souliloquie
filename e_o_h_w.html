@@ -12,28 +12,34 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center container horizontally */
-            justify-content: center; /* Center container vertically */
+            align-items: center; /* Center the entire body content horizontally */
+            justify-content: center; /* Center the content vertically */
             min-height: 100vh;
             background-color: #fff; /* Background is white */
+        }
+
+        .container {
+            text-align: center;
         }
 
         .back-button {
             background-color: white;
             color: black;
-            border: 2px solid black; /* Black border for contrast */
-            padding: 8px 12px;
+            border: 1px solid black; /* Normal width border (not bold) */
+            padding: 4px 8px; /* Smaller padding for a more compact button */
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 12px; /* Smaller font size */
+            font-weight: normal; /* Ensure the text is not bold */
             transition: border 0.3s, color 0.3s, background 0.3s;
-            margin-top: 20px;
-            width: 100%;
+            margin-bottom: 15px; /* Reduced margin below the button */
+            width: auto; /* Adjust width to fit the symbol */
             text-align: center;
+            font-family: 'Cormorant', serif; /* Apply the Cormorant font */
         }
 
         .back-button:hover {
-            border: 2px solid black;
+            border: 1px solid black; /* Ensure normal border on hover */
             color: transparent;
             background: linear-gradient(90deg, blue, #e1daff);
             background-clip: text;
@@ -79,6 +85,9 @@
 </head>
 <body>
     <div class="container">
+        <!-- Back Button above the first title -->
+        <button class="back-button" onclick="goBack()">&lt;</button>
+
         <div class="chapter-list">
             <div class="chapter-item">
                 <a href="eohw_entries/cause_effect.html" class="chapter-highlight">The Cause of E:oHW</a>
@@ -91,8 +100,6 @@
             <div class="chapter-item">[Locked]</div>
             <div class="chapter-item">[Locked]</div>
         </div>
-
-        <button class="back-button" onclick="goBack()">Back</button>
     </div>
 
     <script>
