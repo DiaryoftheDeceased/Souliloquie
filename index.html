@@ -34,7 +34,7 @@
 
         /* Access Code Input Styles */
         .access-code-input {
-            width: 50%;
+            width: 40%;
             padding: 0.5rem;
             font-size: 1rem;
             border: 1px solid rgb(0, 0, 0);
@@ -44,6 +44,13 @@
             color: rgb(0, 0, 0);
             font-family: 'Cormorant', serif; /* Font for the input field */
             text-align: center; /* Center the text inside the input */
+            font-weight: normal; /* Make the text bold */
+        }
+
+        /* Ensuring sharp corners when the input is focused */
+        .access-code-input:focus {
+            outline: none; /* Removes default focus outline */
+            border-radius: 0px; /* Keep sharp corners when focused */
         }
     </style>
     <script>
