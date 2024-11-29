@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
@@ -15,7 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Cormorant', serif; /* Applied Cormorant font */
+            font-family: 'Cormorant', serif; /* Default font */
             background: linear-gradient(135deg, white, #f5f5f5 50%, white 100%);
         }
 
@@ -24,7 +25,7 @@
             background-image: url('./images/front_vines.jpg'); /* Relative path to the image */
             background-size: cover; /* Cover the entire container */
             background-position: center; /* Center the background */
-            border-radius: 10px;
+            border-radius: 0px; /* Sharp corners (no rounding) */
             padding: 6rem;
             text-align: center;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -32,28 +33,38 @@
             width: 100%; /* Ensures the container adjusts responsively */
         }
 
+        /* Access Code Input Styles */
         .access-code-input {
             width: 50%;
             padding: 0.5rem;
             font-size: 1rem;
             border: 1px solid rgb(0, 0, 0);
-            border-radius: 5px;
+            border-radius: 0px; /* Sharp corners (no rounding) */
             margin-bottom: 1rem;
             background-color: #ffffff;
             color: rgb(0, 0, 0);
+            font-family: 'Cormorant', serif; /* Font for the input field */
             text-align: center; /* Center the text inside the input */
+        }
+
+        /* Changed font after entering access code */
+        .entered-code {
+            font-family: 'Cormorant', serif; /* Font for the entered code */
         }
     </style>
     <script>
         // Function to handle the Enter key and validate the access code
         function handleKeyPress(event) {
+            const input = document.getElementById('access-code');
             if (event.key === "Enter") { // Check if the key pressed is Enter
-                const input = document.getElementById('access-code').value.trim();
-                if (input === "1234") { // Replace "1234" with your desired access code
+                if (input.value.trim() === "1234") { // Replace "1234" with your desired access code
                     window.location.href = "main_page.html"; // Redirect to Main Page
                 } else {
                     alert("Invalid Access Code");
                 }
+            } else {
+                // Change font to Cormorant while typing the code
+                input.classList.add('entered-code');
             }
         }
     </script>
