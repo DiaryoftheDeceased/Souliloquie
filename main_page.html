@@ -31,10 +31,15 @@
             background-size: cover; /* Ensures the image covers the entire container */
             background-repeat: no-repeat; /* Prevents tiling */
             background-position: center; /* Centers the background */
-            display: flex; /* Add flexbox to center items */
-            flex-direction: column; /* Stack items vertically */
-            justify-content: center; /* Center items vertically */
-            align-items: center; /* Center items horizontally */
+        }
+
+        /* Centering the list specifically */
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Ensures the list takes up the full container height */
         }
 
         /* Link Styles */
@@ -70,44 +75,37 @@
 </head>
 <body>
     <div class="container">
-        <!-- Link: E: OHW -->
-        <a href="e_o_h_w.html" class="text-link">E: OHW</a>
+        <div class="list-container"> <!-- List container to handle centering -->
+            <!-- Link: E: OHW -->
+            <a href="e_o_h_w.html" class="text-link">E: OHW</a>
 
-        <!-- Divider -->
-        <div class="divider">
-            <span></span>
-            <span></span>
+            <!-- Divider -->
+            <div class="divider">
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Link: Art Museum -->
+            <a href="art_museum.html" class="text-link">Art Museum</a>
+
+            <!-- Divider -->
+            <div class="divider">
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Link: Library -->
+            <a href="library.html" class="text-link">Library</a>
+
+            <!-- Divider -->
+            <div class="divider">
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Link: Diary -->
+            <a href="diary.html" class="text-link">Diary</a>
         </div>
-
-        <!-- Link: Art Museum -->
-        <a href="art_museum.html" class="text-link">Art Museum</a>
-
-        <!-- Divider -->
-        <div class="divider">
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Link: Library -->
-        <a href="library.html" class="text-link">Library</a>
-
-        <!-- Divider -->
-        <div class="divider">
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Link: Diary -->
-        <a href="diary.html" class="text-link">Diary</a>
-
-        <!-- Divider -->
-        <div class="divider">
-            <span></span>
-            <span></span>
-        </div>
-
-        <!-- Link: Auditorium -->
-        <a href="auditorium.html" class="text-link">Auditorium</a>
     </div>
 </body>
 </html>
