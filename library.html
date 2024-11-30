@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table of Contents</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            min-height: 100vh;
+            background-color: #fff; /* Background is white */
+        }
+
+        .back-button {
+            background-color: white;
+            color: black;
+            border: 2px solid black; /* Black border for contrast */
+            width: 30px; /* Smaller width */
+            height: 30px; /* Smaller height */
+            font-size: 14px; /* Smaller font size */
+            text-align: center;
+            cursor: pointer;
+            transition: border 0.3s, color 0.3s, background 0.3s;
+            border-radius: 0; /* Ensure sharp corners */
+            margin-bottom: 10px; /* Add spacing below the button */
+        }
+
+        .archives-title {
+            font-family: 'Monsieur La Doulaise', cursive; /* Apply cursive font */
+            font-size: 32px; /* Larger font size for titles */
+            color: black;
+            margin-bottom: 10px; /* Space below the title */
+            margin-top: 30px; /* Scoot the title down 3px */
+            font-weight: normal; /* Remove bold effect */
+            text-align: center; /* Center the title */
+        }
+
+        .chapter-list {
+            color: black; /* Text color is black */
+            margin-top: 30px; /* Adjust spacing from the title */
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            overflow-y: auto;
+            max-height: 400px;
+            width: 100%;
+        }
+
+        .chapter-item {
+            padding: 5px;
+            border-bottom: 1px solid black; /* Line color is black */
+            max-width: 20%; /* Restrict line length */
+            margin: 0 auto; /* Center horizontally */
+            font-size: 10px; /* Set font size of story titles to 10px */
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-highlight {
+            color: black; /* Text color is black */
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .chapter-highlight:hover {
+            background: linear-gradient(90deg, #000000, #555555); /* Black gradient hover effect */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 5px #cef0ff, 0 0 10px #75fff8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Back button above the title -->
+    <button class="back-button" onclick="goBack()">&lt;</button>
+
+    <!-- Archives title -->
+    <div class="archives-title">Archives</div>
+
+    <!-- Chapter list -->
+    <ul class="chapter-list">
+        <li class="chapter-item">
+            <a class="chapter-highlight" href="#">Diary of the Deceased</a>
+        </li>
+        <li class="chapter-item">
+            <a class="chapter-highlight" href="#">Journie: Retrieve the Purple Flower</a>
+        </li>
+        <li class="chapter-item">
+            <a class="chapter-highlight" href="#">Empyrean Garden</a>
+        </li>
+        <li class="chapter-item">
+            <a class="chapter-highlight" href="#">Golden Excuse</a>
+        </li>
+        <li class="chapter-item">
+            <a class="chapter-highlight" href="#">She is. . .</a>
+        </li>
+        <li class="chapter-item">
+            <a class="chapter-highlight" href="#">Juliette's Labyrinth</a>
+        </li>
+    </ul>
+
+    <script>
+        function goBack() {
+            window.location.href = "main_page.html"; // Redirects to the main page
+        }
+    </script>
+</body>
+</html>
