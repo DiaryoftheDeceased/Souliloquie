@@ -23,12 +23,13 @@
         /* Container Styles */
         .container {
             border-radius: 10px;
-            padding: 3rem;
+            padding: 2rem; /* Reduced padding */
             text-align: center;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            width: 350px; /* Fixed width */
+            width: 250px; /* Smaller fixed width */
+            height: 250px; /* Smaller fixed height */
             background-image: url('./images/vines.jpg'); /* Updated relative file path */
-            background-size: cover; /* Ensures the image covers the entire container */
+            background-size: contain; /* Ensures the image fits within the container */
             background-repeat: no-repeat; /* Prevents tiling */
             background-position: center; /* Centers the background */
         }
@@ -44,7 +45,7 @@
 
         /* Link Styles */
         .text-link {
-            font-size: 80%; /* Corrected comment */
+            font-size: 60%; /* Smaller font size */
             color: rgb(0, 0, 0);
             text-transform: uppercase;
             text-decoration: none;
@@ -107,5 +108,19 @@
             <a href="diary.html" class="text-link">Diary</a>
         </div>
     </div>
+
+    <script>
+        window.onload = function() {
+            var img = new Image();
+            img.src = './images/vines.jpg';  // Path to the image
+
+            img.onload = function() {
+                // Set the container size based on the image size
+                var container = document.querySelector('.container');
+                container.style.width = '250px';  // Set width to 250px
+                container.style.height = '250px';  // Set height to 250px
+            };
+        };
+    </script>
 </body>
 </html>
